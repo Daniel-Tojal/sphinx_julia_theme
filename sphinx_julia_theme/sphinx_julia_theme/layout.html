@@ -24,6 +24,7 @@
   {% endif %}
 
   {# CSS #}
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   {# OPENSEARCH #}
@@ -99,10 +100,13 @@
 
           {% if logo %}
             {# Not strictly valid HTML, but it's the only way to display/scale it properly, without weird scripting or heaps of work #}
-            <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" />
+            {% if theme_logo_only %}
+              <img src="{{ pathto('_static/' + logo, 1) }}" class="logo" style="max-height: 10em;"/>
+            {% else %}
+              <img src="{{ pathto('_static/' + logo, 1) }}" class="logo"/>
+            {% endif %}
           {% endif %}
           </a>
-          <h1>{{ project }}</h1>
 
           {% if theme_display_version %}
             {%- set nav_version = version %}
@@ -175,8 +179,9 @@
             SOURCELINK_SUFFIX: '{{ sourcelink_suffix }}'
         };
     </script>
+
     {%- for scriptfile in script_files %}
-      <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
+    <script type="text/javascript" src="{{ pathto(scriptfile, 1) }}"></script>
     {%- endfor %}
 
   {% endif %}
