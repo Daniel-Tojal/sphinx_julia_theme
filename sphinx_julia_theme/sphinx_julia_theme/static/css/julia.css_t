@@ -1,11 +1,16 @@
-* {
-    box-shadow: none;
-}
+@import url("theme.css");
 
 .wy-nav-content,
 .wy-nav-content-wrap {
     color: #222;
     background: #fff;
+}
+
+body{
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    text-align: justify;
 }
 
 body,
@@ -64,7 +69,9 @@ nav.toc .logo {
 }
 
 div.section {
-    font-family: georgia, serif;
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -110,5 +117,20 @@ input[type="number"], input[type="search"], input[type="tel"], input[type="color
     border-radius: 0;
     -webkit-transition: border 0.3s linear;
     -moz-transition: border 0.3s linear;
-    transition: border 0.3s linear
+    transition: border 0.3s linear;
+    color: rgb(0, 0, 0);
+}
+
+.under-title {
+    text-align: center;
+    font-size: 22px;
+    line-height: 36px;
+}
+
+.btn {
+    box-shadow: none;
+}
+
+.wy-menu-vertical a {
+    color: rgb(82, 82, 82);
 }
