@@ -134,3 +134,13 @@ input[type="number"], input[type="search"], input[type="tel"], input[type="color
 .wy-menu-vertical a {
     color: rgb(82, 82, 82);
 }
+
+.wy-menu a:hover {
+    text-decoration: none;
+    color: #FCFDF6;
+}
+
+.wy-menu-vertical ul,
+.wy-menu-vertical a{
+    color: #404040;
+}
