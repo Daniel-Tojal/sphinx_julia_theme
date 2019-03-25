@@ -190,7 +190,7 @@ dl.function{
 }
 
 dl.class{
-    border: 1px solid #ddd;
+    border: 10px solid #ddd;
     margin: 0.5em 0;
     padding: 0.5em;
     border-radius: 3px;
