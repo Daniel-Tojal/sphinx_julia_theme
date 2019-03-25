@@ -189,6 +189,13 @@ dl.function{
     border-radius: 3px;
 }
 
+dl.class{
+    border: 1px solid #ddd;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 3px;
+}
+
 .rst-versions {
     position: fixed;
     bottom: 0;
